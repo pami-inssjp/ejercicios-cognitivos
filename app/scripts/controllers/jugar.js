@@ -45,4 +45,6 @@ angular.module('hton1App')
 
         $scope.gridEjercicio = ejercicio;
 
+        $scope.test ="hola";
+
   });
