@@ -24,7 +24,9 @@ angular.module('hton1App')
 
         var result = Randomservice.method1(4,4, 'esto es un log vacío =P');
 
-        ejercicio.matrix = result.result;
+        ejercicio.matrix = result.matriz;
+
+        $scope.patron = result.patron;
 
         $scope.gridEjercicio = ejercicio;
 
@@ -35,7 +37,11 @@ angular.module('hton1App')
             var x = param.substring(0, 1);
             var y = param.substring(1, 2);
 
-            return ejercicio.matrix[x][y].patron ? 1 : 2;
+            var valido = ejercicio.matrix[x][y].patronActivo ? 1 : 2;
+
+            console.log("patron valido: " + valido);
+
+            return valido;
         };
 
   });

@@ -1,5 +1,5 @@
 <div class="text-center" ng-controller="JugarCtrl">
-<p>Hacé click en todas las imágenes iguales a esta: <img src="images/{{}}.png" alt="{{}}"/></p>
+<p>Hacé click en todas las imágenes iguales a esta: <img src="images/{{patron}}.png" alt="{{patron}}"/></p>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
         <!-- Table Body -->
 
@@ -10,7 +10,6 @@
         <tr ng-repeat="row in gridEjercicio.matrix">
             <td class="tile" ng-repeat="tile in row" ng-init="index=0; classes=['white','green','red' ]"
                 ng-class="classes[index % classes.length]">
-                celdas {{tile.id}}
                 <img src="{{tile.imagen}}" alt="description here" ng-click="index = verificar(tile.id);"/>
             </td>
         </tr>
@@ -33,5 +32,9 @@
 
     .white {
         background-color: #ffffff;
+    }
+
+    td {
+        padding: 10px;
     }
 </style>
