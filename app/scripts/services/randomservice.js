@@ -9,10 +9,9 @@
  */
 angular.module('hton1App')
   .service('Randomservice',  function() {
-        this.method1 = function(rows,cols,img) {
-            console.log("11111 " + img);
+        this.method1 = function(rows,cols) {
 
-            var patrones = ['cacerola','banana','stop','muffin','pera'];
+            var patrones = ['cacerola','bananas','tuerca','muffin','stop','pera'];
 
             var m = 5,
             // a - 1 should be divisible by m's prime factors
@@ -48,14 +47,14 @@ angular.module('hton1App')
                     var celda = {
                         id:''+i + j,
                         imagen: 'images/'+imagenCelda+'.png',
-                        patron: (imagenCelda===patron)?true:false
+                        patronActivo: (imagenCelda===patron)?true:false
                     };
                     result[i][j] = celda;
                 }
             }
 
 
-            return result;
+            return  {matriz:result,patron:patron};
         }
 
         this.method2 = function() {
