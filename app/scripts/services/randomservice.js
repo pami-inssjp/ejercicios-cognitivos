@@ -9,7 +9,7 @@
  */
 angular.module('hton1App')
   .service('Randomservice',  function() {
-        this.method1 = function(rows,cols) {
+        this.method1 = function(cols,rows) {
 
             var patrones = ['cacerola','bananas','tuerca','muffin','stop','pera','regla'];
 

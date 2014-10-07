@@ -17,7 +17,7 @@ angular.module('hton1App')
         //-- ejercicio 1
         var ejercicio = {
             idmatrix: 1,
-            x:6,
+            x:10,
             y:6,
             matrix: []
         };

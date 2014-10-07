@@ -31,6 +31,10 @@ angular
             templateUrl: 'views/partials/juego.html',
             controller: ''
         })
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: ''
+        })
       .otherwise({
         redirectTo: '/'
       });
