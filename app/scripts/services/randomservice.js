@@ -13,21 +13,9 @@ angular.module('hton1App')
 
             var patrones = ['cacerola','bananas','tuerca','muffin','stop','pera','regla'];
 
-            var m = 5,
-            // a - 1 should be divisible by m's prime factors
-            a = 11,
-            // c and m should be co-prime
-            c = 17;
-            // Setting the seed
-            var z = 3;
+            var m = 6;
             var rand = function() {
-            // define the recurrence relationship
-                //z = (a * z + c) % m;
-                // return an integer
-                // Could return a float in (0, 1) by dividing by m
-
-                var z=Math.floor(Math.random()*6);
-                return z;
+                return Math.floor(Math.random()*m);
             };
 
             for(i = 0; i < 6; i++) {
