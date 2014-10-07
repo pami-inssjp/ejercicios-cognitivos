@@ -11,7 +11,7 @@ angular.module('hton1App')
   .service('Randomservice',  function() {
         this.method1 = function(rows,cols) {
 
-            var patrones = ['cacerola','bananas','tuerca','muffin','stop','pera'];
+            var patrones = ['cacerola','bananas','tuerca','muffin','stop','pera','regla'];
 
             var m = 5,
             // a - 1 should be divisible by m's prime factors
