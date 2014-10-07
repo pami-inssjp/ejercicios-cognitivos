@@ -8,7 +8,7 @@
  * Controller of the hton1App
  */
 angular.module('hton1App')
-  .controller('JugarCtrl', function ($scope, $rootScope) {
+  .controller('JugarCtrl', function ($scope, $rootScope, Randomservice) {
 
         //-- Este controller renderiza los juegos.
 
@@ -21,30 +21,19 @@ angular.module('hton1App')
             y:4,
             matrix: []
         };
-//        var imagenAleatoria = imageArray[Math.floor(Math.random() * myArray.length)];
 
-        //-- Inicializacion de la matriz
-        var matrix = [];
-
-        for(var i=0; i<ejercicio.y; i++) {
-            ejercicio.matrix[i] = new Array(ejercicio.x);
-        }
-
-        for(var i=0; i < ejercicio.y; i++) {
-//            matrix[i] = [];
-            for(var j=0; j < ejercicio.x; j++) {
-                var celda = {
-                    id:''+i + j,
-                    imagen: 'images/icon1.png',
-                    eventoClick: function(){alert('Esta es la celda ' + id)}
-                };
-                ejercicio.matrix[i][j] = celda;
-
-            }
-        }
+        ejercicio.matrix = Randomservice.method1(4,4, 'esto es un log vacío =P');
 
         $scope.gridEjercicio = ejercicio;
 
-        $scope.test ="hola";
+        $scope.valido = true;
+        $scope.verificar = function(param) {
+           console.log("viene " + param);
+            $scope.valido = !$scope.valido;
+            var x = param.substring(0, 1);
+            var y = param.substring(1, 2);
+
+            return ejercicio.matrix[x][y].patron ? 1 : 2;
+        };
 
   });

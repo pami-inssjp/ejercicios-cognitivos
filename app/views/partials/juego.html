@@ -1,5 +1,5 @@
 <div class="text-center" ng-controller="JugarCtrl">
-before table
+<p>Hacé click en todas las imágenes iguales a esta: <img src="images/{{}}.png" alt="{{}}"/></p>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
         <!-- Table Body -->
 
@@ -8,10 +8,10 @@ before table
         </tr><!-- Table Row -->
 
         <tr ng-repeat="row in gridEjercicio.matrix">
-
-            <td class="tile" ng-repeat="tile in row">
+            <td class="tile" ng-repeat="tile in row" ng-init="index=0; classes=['white','green','red' ]"
+                ng-class="classes[index % classes.length]">
                 celdas {{tile.id}}
-                <img src="{{tile.imagen}}" alt="description here" />
+                <img src="{{tile.imagen}}" alt="description here" ng-click="index = verificar(tile.id);"/>
             </td>
         </tr>
 
@@ -20,3 +20,18 @@ before table
     </table>
 
 </div>
+
+<style type="text/css" >
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .white {
+        background-color: #ffffff;
+    }
+</style>
