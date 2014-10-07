@@ -47,14 +47,14 @@ angular.module('hton1App')
                     var celda = {
                         id:''+i + j,
                         imagen: 'images/'+imagenCelda+'.png',
-                        patron: (imagenCelda===patron)?true:false
+                        patronActivo: (imagenCelda===patron)?true:false
                     };
                     result[i][j] = celda;
                 }
             }
 
 
-            return result;
+            return  {matriz:result,patron:patron};
         }
 
         this.method2 = function() {
