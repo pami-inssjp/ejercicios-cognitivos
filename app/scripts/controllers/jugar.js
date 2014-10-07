@@ -22,7 +22,9 @@ angular.module('hton1App')
             matrix: []
         };
 
-        ejercicio.matrix = Randomservice.method1(4,4, 'esto es un log vacío =P');
+        var result = Randomservice.method1(4,4, 'esto es un log vacío =P');
+
+        ejercicio.matrix = result.result;
 
         $scope.gridEjercicio = ejercicio;
 
