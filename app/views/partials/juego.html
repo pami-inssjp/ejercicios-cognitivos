@@ -2,11 +2,6 @@
 <p>Hacé click en todas las imágenes iguales a esta: <img src="images/{{patron}}.png" alt="{{patron}}"/></p>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
         <!-- Table Body -->
-
-        <tr  ng-repeat="celdas in gridEjercicio.matrix">
-            <td>{{JSON.stringify(gridEjercicio.matrix)}}</td>
-        </tr><!-- Table Row -->
-
         <tr ng-repeat="row in gridEjercicio.matrix">
             <td class="tile" ng-repeat="tile in row" ng-init="index=0; classes=['white','green','red' ]"
                 ng-class="classes[index % classes.length]">

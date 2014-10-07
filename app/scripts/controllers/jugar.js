@@ -17,12 +17,12 @@ angular.module('hton1App')
         //-- ejercicio 1
         var ejercicio = {
             idmatrix: 1,
-            x:4,
-            y:4,
+            x:6,
+            y:6,
             matrix: []
         };
 
-        var result = Randomservice.method1(4,4, 'esto es un log vacío =P');
+        var result = Randomservice.method1(ejercicio.x,ejercicio.y);
 
         ejercicio.matrix = result.matriz;
 
