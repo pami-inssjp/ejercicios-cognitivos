@@ -22,9 +22,11 @@ angular.module('hton1App')
             var z = 3;
             var rand = function() {
             // define the recurrence relationship
-                z = (a * z + c) % m;
+                //z = (a * z + c) % m;
                 // return an integer
                 // Could return a float in (0, 1) by dividing by m
+
+                var z=Math.floor(Math.random()*6);
                 return z;
             };
 
