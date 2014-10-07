@@ -1,0 +1,14 @@
+<div class="text-center" ng-controller="JugarCtrl">
+
+    <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+        <!-- Table Body -->
+
+        <tr  ng-repeat="celdas in gridEjercicio.matrix">
+            celda
+            <td>{{JSON.stringify(gridEjercicio.matrix)}}</td>
+        </tr><!-- Table Row -->
+
+        <!-- Table Body -->
+
+    </table>
+</div>
